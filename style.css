@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.display {
+  width: 80vw;
+  height: 50vh;
+  background-color: rgb(218, 209, 209);
+}
