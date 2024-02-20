@@ -8,11 +8,124 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="display">
-      <button class="newBook">New Book</button>
-      <dialog class="modal">
-        <form class="form" method="dialog"></form>
-      </dialog>
+    <div class="header">
+      <div class="upper">
+        <div class="search">
+          <img src="" alt="" class="searchIcon" />
+          <input type="text" class="searchBar" />
+        </div>
+
+        <div class="profile">
+          <img src="" alt="" class="notificationImg" />
+          <img src="" alt="" class="profileImg" />
+          <p class="profileName">Filip Dabek</p>
+        </div>
+      </div>
+      <div class="lower">
+        <img src="" alt="" class="profileImg" />
+        <div class="profileIntroduction">
+          <p class="hi">Hi there,</p>
+          <p class="profileName">Filip Dabek (@fdabek)</p>
+        </div>
+        <div class="buttons">
+          <button class="button1 newBookButton" type="button">Add Book</button>
+          <button class="button2" type="button">Upload</button>
+          <button class="button3" type="button">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="logo">
+        <a href=""
+          ><img src="img/view-dashboard.svg" alt="" />
+          <p>Dashboard</p></a
+        >
+      </div>
+      <ul class="menu1">
+        <li class="li1">
+          <a href=""><img src="" alt="" /> <span>Home</span></a>
+        </li>
+        <li class="li2">
+          <a href=""><img src="" alt="" /> Profile</a>
+        </li>
+        <li class="li3">
+          <a href=""><img src="" alt="" /> Messages</a>
+        </li>
+        <li class="li4">
+          <a href=""><img src="" alt="" /> History</a>
+        </li>
+        <li class="li5">
+          <a href=""><img src="" alt="" /> Tasks</a>
+        </li>
+        <li class="li6">
+          <a href=""><img src="" alt="" /> Communities</a>
+        </li>
+      </ul>
+      <ul class="menu2">
+        <li class="li1">
+          <a href=""><img src="" alt="" /> Settings</a>
+        </li>
+        <li class="li2">
+          <a href=""><img src="" alt="" /> Support</a>
+        </li>
+        <li class="li3">
+          <a href=""><img src="" alt="" /> Privacy</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h2>Your Library</h2>
+      <div class="yourLib"></div>
+      <div class="lib">
+        <dialog class="modal">
+          <h3>Details of the book:</h3>
+          <form class="form" id="form" method="dialog">
+            <div>
+              <label for="title">Title </label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div>
+              <label for="author">Author </label>
+              <input type="text" name="author" id="author" />
+            </div>
+            <div>
+              <label>Pages </label>
+              <input type="text" name="pages" id="pages" />
+            </div>
+            <div>
+              <label for="read">Read? </label>
+              <select name="read" id="read">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </div>
+            <div>
+              <input type="submit" name="submit" id="submit" />
+            </div>
+          </form>
+        </dialog>
+      </div>
+      <div class="trending">
+        <h3>Trending</h3>
+        <div class="div1">
+          <img src="" alt="" />
+          <p>@tegan<br />World Peace Builder</p>
+        </div>
+        <div class="div2">
+          <img src="" alt="" />
+          <p>@morgan<br />Super Cool Project</p>
+        </div>
+        <div class="div3">
+          <img src="" alt="" />
+          <p>@kendall<br />Life Changing App</p>
+        </div>
+        <div class="div4">
+          <img src="" alt="" />
+          <p>@alex<br />No Traffic Maker</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
