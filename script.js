@@ -80,6 +80,21 @@ function render() {
     para4.appendChild(span);
     divText.appendChild(para4);
 
+    const para5 = document.createElement("p");
+    para5.setAttribute("class", `buts`);
+    const delb = document.createElement("button");
+    const textdel = document.createTextNode("Delete");
+    delb.appendChild(textdel);
+    delb.setAttribute("class", `delb delb${counter}`);
+    const statb = document.createElement("button");
+    const textsta = document.createTextNode("Switch Status");
+    statb.appendChild(textsta);
+    statb.setAttribute("class", `statb statb${counter}`);
+
+    para5.appendChild(statb);
+    para5.appendChild(delb);
+    divText.appendChild(para5);
+
     const divCard = document.createElement("div");
     divCard.setAttribute("class", `card card${counter}`);
     counter++;
@@ -87,11 +102,19 @@ function render() {
     divCard.appendChild(divText);
     display.appendChild(divCard);
   }
-  let cards = document.querySelectorAll(".card");
-  cards.forEach((element) => {
+  let delbuts = document.querySelectorAll(".delb");
+  delbuts.forEach((element) => {
     let x = element.getAttribute("class").replace(/[^\d-]/g, "");
     element.addEventListener("click", () => {
       myLib.splice(Number(x), 1);
+      render();
+    });
+  });
+  let statbuts = document.querySelectorAll(".statb");
+  statbuts.forEach((element) => {
+    let x = element.getAttribute("class").replace(/[^\d-]/g, "");
+    element.addEventListener("click", () => {
+      myLib[Number(x)].changeReadStatus();
       render();
     });
   });

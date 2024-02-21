@@ -9,6 +9,12 @@
   outline: none;
 }
 
+button:hover,
+img:hover,
+.upper .profileName:hover {
+  cursor: grab;
+}
+
 .modal {
   margin: auto;
 }
@@ -189,13 +195,10 @@ body {
   background-color: white;
   width: 330px;
   justify-self: center;
-  display: grid;
-  grid-template-rows: 1fr 0.2fr;
   padding: 20px;
   border-radius: 10px;
   border-left: 10px rgb(119, 136, 190) solid;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  gap: 15px;
 }
 .yourLib img {
   width: 30px;
@@ -210,7 +213,7 @@ body {
 .yourLib .text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
 }
 
 .trending {
@@ -290,10 +293,12 @@ form #submit:hover {
 
 span.read {
   color: green;
+  font-weight: bold;
 }
 
 span.not.read {
   color: red;
+  font-weight: bold;
 }
 
 dialog {
@@ -310,29 +315,28 @@ dialog::backdrop {
   opacity: 0.3;
 }
 
-.yourLib > div {
-  position: relative;
+.yourLib > div .buts {
+  display: flex;
+  justify-content: space-between;
 }
 
-.yourLib > div:hover::after {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  display: grid;
-  place-content: center;
-  width: 100%;
-  height: 100%;
-  font-size: 3em;
-  color: rgba(255, 0, 0, 0.5);
-  background-color: rgba(255, 0, 0, 0.2);
-  content: "delete?";
-  position: absolute;
+.yourLib > div .buts > * {
+  margin-top: 0.4em;
+  margin-inline: 0.1em;
+  padding-block: 0.3em;
+  padding-inline: 0.5em;
+  border: 0;
+  border-radius: 0.4em;
+  background-color: rgb(184, 252, 184);
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
 }
-.yourLib > div:hover::before {
-  width: 100%;
-  height: 100%;
-  font-size: 3em;
-  color: rgba(255, 0, 0, 0.5);
-  background-color: rgba(255, 0, 0, 0.2);
-  content: "change status?";
-  position: absolute;
+
+.yourLib > div .buts > .delb:hover {
+  background-color: rgb(255, 126, 126);
+  box-shadow: 0 0 0.5em rgba(133, 0, 0, 0.5);
+}
+.yourLib > div .buts > .statb:hover {
+  background-color: rgb(179, 255, 156);
+  box-shadow: 0 0 0.5em rgb(179, 255, 156);
 }
