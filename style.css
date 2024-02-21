@@ -30,8 +30,8 @@ body {
   background: white;
   display: grid;
   grid-template: 1fr 1fr/ 1fr;
-  padding-bottom: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding-bottom: 1.2em;
+  box-shadow: 0 0.12em 0.3em rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -41,8 +41,8 @@ body {
   justify-items: center;
   align-items: center;
   img {
-    width: 35px;
-    height: 35px;
+    width: 2.2em;
+    height: 2.2em;
   }
   .profile {
     display: grid;
@@ -51,16 +51,16 @@ body {
   }
   .search {
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 2.4em 1fr;
     justify-self: stretch;
     align-items: center;
-    margin-inline: 10px;
-    gap: 5px;
+    margin-inline: 0.7em;
+    gap: 0.3em;
   }
   input {
     border: none;
-    height: 30px;
-    border-radius: 15px;
+    height: 1.9rem;
+    border-radius: 1em;
     background-color: rgb(230, 230, 230);
   }
 }
@@ -81,11 +81,11 @@ body {
   }
   .profileName {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.5rem;
   }
   img {
-    width: 60px;
-    height: 60px;
+    width: 3rem;
+    height: 3rem;
     justify-self: center;
   }
   .buttons {
@@ -96,11 +96,11 @@ body {
   button {
     background-color: rgb(102, 192, 114);
     width: 90%;
-    height: 2.5rem;
-    border-radius: 30px;
+    height: 2.2rem;
+    border-radius: 1.8rem;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
   }
   button:hover {
@@ -117,50 +117,50 @@ body {
   display: grid;
   grid-template: 1fr 4fr 2fr;
   align-content: start;
-  gap: 50px;
+  gap: 2.6rem;
   grid-row: 1/3;
   grid-column: 1/2;
   background: rgb(102, 192, 114);
   color: white;
   font-weight: 700;
-  padding: 15px;
+  padding: 1rem;
 }
 
 .sidebar img {
-  width: 25px;
-  height: 25px;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .sidebar > .logo {
   display: flex;
-  gap: 10px;
+  gap: 0.8rem;
   align-items: center;
 }
 
-.sidebar p {
-  font-size: 30px;
-}
 .sidebar .logo img {
-  width: 40px;
-  height: 40px;
+  width: 2.7rem;
+  height: 2.7rem;
 }
 
+.sidebar p {
+  font-size: 2rem;
+}
 .sidebar ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.7rem;
   list-style: none;
 }
 .sidebar li {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 .sidebar a {
   text-decoration: none;
   color: white;
   display: flex;
-  gap: 5px;
+  gap: 0.3rem;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 0.3rem;
 }
 
 .sidebar a:hover {
@@ -175,45 +175,42 @@ body {
   background: rgb(230, 230, 230);
   display: grid;
   grid-template: 2.5rem 18rem 1fr / 1fr 0.38fr;
-  padding-left: 20px;
-  padding-right: 35px;
-  gap: 20px;
-  padding-bottom: 30px;
+  padding-left: 1.3rem;
+  padding-right: 2rem;
+  gap: 1.2rem;
+  padding-bottom: 2rem;
 }
 .libHeader {
   grid-row: 1/2;
   grid-column: 1/2;
-  padding: 15px;
+  padding: 1rem;
 }
 .yourLib {
   display: grid;
   grid-template: 1fr 1fr 1fr/ 1fr 1fr;
-  gap: 30px;
+  gap: 1.3rem;
   grid-row: 2/4;
 }
 .yourLib > div {
   background-color: white;
-  width: 330px;
+  width: 21rem;
   justify-self: center;
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 10px rgb(119, 136, 190) solid;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1.3rem;
+  border-radius: 0.6rem;
+  border-left: 0.68rem rgb(119, 136, 190) solid;
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.3);
 }
-.yourLib img {
-  width: 30px;
-  height: 30px;
-}
+
 .yourLib .buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 0.7rem;
 }
 .yourLib .text {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .trending {
@@ -221,10 +218,10 @@ body {
   grid-column: 2/3;
   grid-row: 2/3;
   background-color: white;
-  border-radius: 10px;
-  padding: 30px;
+  border-radius: 0.7rem;
+  padding: 1.3rem;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -232,12 +229,12 @@ body {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 0.45rem;
   padding-inline: 0.5em;
 }
 .trending img {
-  width: 40px;
-  height: 40px;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 .trending > div:hover {
   background-color: rgb(235, 255, 226);
@@ -245,7 +242,7 @@ body {
 .trendHeader {
   grid-row: 1/2;
   grid-column: 2/3;
-  padding: 15px;
+  padding: 1rem;
 }
 
 .display {
@@ -287,7 +284,7 @@ form #submit:hover {
   background: rgb(198, 202, 144);
 }
 .title {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -304,14 +301,14 @@ span.not.read {
 dialog {
   background: rgb(253, 255, 253);
   width: 20rem;
-  padding: 20px;
-  border: 1px solid rgba(0, 128, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  gap: 15px;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 0.7rem;
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.3);
+  gap: 1rem;
 }
 dialog::backdrop {
-  background: linear-gradient(45deg, blue, green);
+  background: linear-gradient(45deg, rgb(66, 83, 133), rgb(61, 185, 61));
   opacity: 0.3;
 }
 
