@@ -15,10 +15,13 @@ function createBook(title, author, pages, read) {
 
 createBook.prototype = {
   readInfo: function () {
-    return this.read === true ? "read" : "not read";
+    return this.read === true ? `read` : "not read";
   },
   info: function () {
     return [this.title, this.author, this.pages];
+  },
+  changeReadStatus: function () {
+    this.read === true ? (this.read = false) : (this.read = true);
   },
 };
 
@@ -41,7 +44,7 @@ function render() {
   while (display.firstChild) {
     display.removeChild(display.firstChild);
   }
-  let counter = 1;
+  let counter = 0;
   for (let element of myLib) {
     const divText = document.createElement("div");
     divText.setAttribute("class", `text`);
@@ -78,10 +81,18 @@ function render() {
     divText.appendChild(para4);
 
     const divCard = document.createElement("div");
-    divCard.setAttribute("class", `card${counter}`);
+    divCard.setAttribute("class", `card card${counter}`);
     counter++;
 
     divCard.appendChild(divText);
     display.appendChild(divCard);
   }
+  let cards = document.querySelectorAll(".card");
+  cards.forEach((element) => {
+    let x = element.getAttribute("class").replace(/[^\d-]/g, "");
+    element.addEventListener("click", () => {
+      myLib.splice(Number(x), 1);
+      render();
+    });
+  });
 }

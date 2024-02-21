@@ -5,6 +5,10 @@
   font-family: Roboto;
 }
 
+*:focus {
+  outline: none;
+}
+
 .modal {
   margin: auto;
 }
@@ -31,8 +35,8 @@ body {
   justify-items: center;
   align-items: center;
   img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
   .profile {
     display: grid;
@@ -54,9 +58,17 @@ body {
     background-color: rgb(230, 230, 230);
   }
 }
+.upper .profileName {
+  padding-inline: 0.5em;
+  margin-right: 1em;
+}
+.upper .profile > *:hover {
+  background-color: rgb(235, 255, 226);
+  border-radius: 0.3em;
+}
 .header .lower {
   display: grid;
-  grid-template-columns: 0.15fr 1fr 0.35fr;
+  grid-template-columns: 0.15fr 1fr 0.48fr;
   align-items: center;
   .hi {
     font-weight: bold;
@@ -76,9 +88,9 @@ body {
     justify-items: center;
   }
   button {
-    background-color: rgb(102, 102, 192);
-    width: 80px;
-    height: 40px;
+    background-color: rgb(102, 192, 114);
+    width: 90%;
+    height: 2.5rem;
     border-radius: 30px;
     color: white;
     font-weight: bold;
@@ -86,8 +98,13 @@ body {
     border: none;
   }
   button:hover {
-    background-color: rgba(102, 102, 192, 0.5);
+    background-color: rgb(238, 243, 173);
   }
+}
+
+.lower .profileImg:hover {
+  background-color: rgb(235, 255, 226);
+  border-radius: 35%;
 }
 
 .sidebar {
@@ -97,7 +114,7 @@ body {
   gap: 50px;
   grid-row: 1/3;
   grid-column: 1/2;
-  background: rgb(102, 102, 192);
+  background: rgb(102, 192, 114);
   color: white;
   font-weight: 700;
   padding: 15px;
@@ -137,31 +154,29 @@ body {
   display: flex;
   gap: 5px;
   align-items: center;
+  border-radius: 5px;
 }
+
 .sidebar a:hover {
-  background-color: rgba(165, 165, 231, 0.5);
-}
-.sidebar a:hover {
-  background-color: rgba(165, 165, 231, 0.5);
+  background-color: rgb(115, 207, 127);
 }
 
 .sidebar .logo a:hover {
-  background-color: rgba(165, 165, 231, 0.5);
+  background-color: rgb(115, 207, 127);
 }
 
 .main {
   background: rgb(230, 230, 230);
   display: grid;
-  grid-template: 0.1fr 1fr 1fr / 1fr 0.4fr;
+  grid-template: 2.5rem 18rem 1fr / 1fr 0.38fr;
   padding-left: 20px;
   padding-right: 35px;
   gap: 20px;
   padding-bottom: 30px;
 }
-.main h2 {
+.libHeader {
   grid-row: 1/2;
-  grid-column: 1/3;
-  font-size: 18px;
+  grid-column: 1/2;
   padding: 15px;
 }
 .yourLib {
@@ -178,7 +193,7 @@ body {
   grid-template-rows: 1fr 0.2fr;
   padding: 20px;
   border-radius: 10px;
-  border-left: 10px yellowgreen solid;
+  border-left: 10px rgb(119, 136, 190) solid;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   gap: 15px;
 }
@@ -201,11 +216,11 @@ body {
 .trending {
   display: grid;
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 2/3;
   background-color: white;
   border-radius: 10px;
   padding: 30px;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   position: relative;
 }
@@ -214,27 +229,20 @@ body {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   align-items: center;
+  border-radius: 5px;
+  padding-inline: 0.5em;
 }
 .trending img {
   width: 40px;
   height: 40px;
 }
-
-.announcements {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  border-radius: 10px;
-  padding: 30px;
-  display: grid;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr;
-  background-color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  position: relative;
-  gap: 8px;
+.trending > div:hover {
+  background-color: rgb(235, 255, 226);
 }
-.announcements hr {
-  border: 1px solid rgba(102, 102, 192, 0.1);
-  margin-top: 8px;
+.trendHeader {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  padding: 15px;
 }
 
 .display {
@@ -264,9 +272,17 @@ form div:has(#submit) {
 }
 form #submit {
   width: 15ch;
-  height: 3ch;
+  height: 4ch;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background: rgb(102, 192, 114);
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
-
+form #submit:hover {
+  background: rgb(198, 202, 144);
+}
 .title {
   font-size: 18px;
   font-weight: bold;
@@ -278,4 +294,45 @@ span.read {
 
 span.not.read {
   color: red;
+}
+
+dialog {
+  background: rgb(253, 255, 253);
+  width: 20rem;
+  padding: 20px;
+  border: 1px solid rgba(0, 128, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  gap: 15px;
+}
+dialog::backdrop {
+  background: linear-gradient(45deg, blue, green);
+  opacity: 0.3;
+}
+
+.yourLib > div {
+  position: relative;
+}
+
+.yourLib > div:hover::after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3em;
+  color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.2);
+  content: "delete?";
+  position: absolute;
+}
+.yourLib > div:hover::before {
+  width: 100%;
+  height: 100%;
+  font-size: 3em;
+  color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.2);
+  content: "change status?";
+  position: absolute;
 }
