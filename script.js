@@ -119,3 +119,6 @@ function render() {
     });
   });
 }
+
+addBookToLibrary("example", "example", 10, true);
+render();
